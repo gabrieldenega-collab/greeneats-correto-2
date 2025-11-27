@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GreenEats - Produtos Organicos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>GreenEats</h1>
+      <p>Gerencie seus produtos organicos</p>
+    </header>
+
+    <section class="form-section">
+      <h2>Cadastrar Novo Produto</h2>
+      <form id="form-produto">
+        <div class="form-group">
+          <label for="nome">Nome do Produto</label>
+          <input type="text" id="nome" name="nome" placeholder="Ex: Banana Organica" required>
+        </div>
+
+        <div class="form-group">
+          <label for="preco">Preco (R$)</label>
+          <input type="number" id="preco" name="preco" step="0.01" min="0.01" placeholder="Ex: 5.99" required>
+        </div>
+
+        <div class="form-group">
+          <label for="categoria">Categoria</label>
+          <select id="categoria" name="categoria" required>
+            <option value="">Selecione...</option>
+            <option value="fruta">Fruta</option>
+            <option value="legumes">Legumes</option>
+            <option value="verdura">Verdura</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="descricao">Detalhes do Produto</label>
+          <textarea id="descricao" name="descricao" rows="3" placeholder="Descreva o produto..."></textarea>
+        </div>
+
+        <button type="submit" class="btn-submit">Cadastrar Produto</button>
+      </form>
+    </section>
+
+    <section class="produtos-section">
+      <h2>Lista de Produtos</h2>
+      <div id="lista-produtos">
+        <p class="loading">Carregando produtos...</p>
+      </div>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
